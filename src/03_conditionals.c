@@ -1,31 +1,32 @@
 #include <stdio.h>
 
-/*
-TASK 3: Conditional Statements
-Goal: if / else if / else + input validation.
-
-TODOs:
-1) Ask the user for an exam score (0 to 100).
-2) If the score is outside 0..100, print "Invalid score" and exit.
-3) Otherwise, print the grade:
-   - 90..100: A
-   - 80..89 : B
-   - 70..79 : C
-   - 60..69 : D
-   - 0..59  : F
-4) Bonus: If score is exactly 100, also print "Perfect score!"
-
-*/
-
 int main(void) {
-    int score = -1;
+    int number;
 
-    printf("Enter exam score (0-100): ");
-    // TODO: scanf score
+    printf("Enter a number: ");
+    scanf("%d", &number);
 
-    // TODO: validate score range
+    printf("\n=== Results ===\n");
 
-    // TODO: grade logic with else-if ladder
+    if (number > 0) {
+        printf("The number is positive.\n");
+    } else if (number < 0) {
+        printf("The number is negative.\n");
+    } else {
+        printf("The number is zero.\n");
+    }
+
+    if (number % 2 == 0) {
+        printf("The number is even.\n");
+    } else {
+        printf("The number is odd.\n");
+    }
+
+    if (number >= 1 && number <= 100) {
+        printf("The number is between 1 and 100.\n");
+    } else {
+        printf("The number is NOT between 1 and 100.\n");
+    }
 
     return 0;
 }
